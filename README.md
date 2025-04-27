@@ -11,7 +11,7 @@ Clone the repository and install the required dependencies by running the follow
 
 ```bash
 git clone https://github.com/imenam/claim_airdrop_from_hacked_wallet.git
-cd flashbot-claim-bundle
+cd claim_airdrop_from_hacked_wallet
 npm install
 ```
 
