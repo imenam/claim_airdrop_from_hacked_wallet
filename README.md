@@ -1,14 +1,25 @@
 
-1. **Setup**  
-install [node js](https://nodejs.org/en/download)
+# Flashbot Claim Bundle Setup Guide
 
-   Clone the repo and install dependencies:
-   ```bash
-   git clone https://github.com/imenam/flashbot-claim-bundle.git
-   cd flashbot-claim-bundle
-   npm install
-3. **Edit .env with your values**
+## 1. **Setup**
 
+### Install Node.js
+To get started, you need to install Node.js. Download and install it from the official [Node.js website](https://nodejs.org/en/download).
+
+### Clone the Repository and Install Dependencies
+Clone the repository and install the required dependencies by running the following commands:
+
+```bash
+git clone https://github.com/imenam/flashbot-claim-bundle.git
+cd flashbot-claim-bundle
+npm install
+```
+
+## 2. **Configure `.env` File**
+
+Next, configure your `.env` file by adding your personal wallet keys and contract details. Here’s an example `.env` configuration:
+
+```plaintext
 PRIVATE_KEY_GAS=0xYOUR_GAS_PRIVATE_KEY
 GAS_WALLET=0xYOUR_GAS_WALLET_ADDRESS
 
@@ -21,19 +32,30 @@ AIRDROP_TOKEN=0xE1F23869776c82f691d9Cb34597Ab1830Fb0De58
 ETH_MAINNET_RPC=https://rpc.ankr.com/eth
 MAX_FEE_PER_GAS=10000000000
 MAX_PRIORITY_FEE_PER_GAS=500000000
+```
 
-*stHYPER users: ✅ No changes needed in MERKLE_CONTRACT,AIRDROP_TOKEN*
+- **stHYPER Users**: If you're a stHYPER user, no changes are needed for `MERKLE_CONTRACT` or `AIRDROP_TOKEN`.
 
-3.**ABI & merkle Proof**
+## 3. **ABI & Merkle Proof**
 
-stHYPER users: ✅ No changes needed
+### stHYPER Users
+- ✅ No changes are required for `MERKLE_CONTRACT` and `AIRDROP_TOKEN`.
 
-Other airdrops:
-Update airdrop_abi.json with the new contract’s ABI (from Etherscan → Contract→code→ ABI).
+### Other Airdrop Users
+If you're claiming from a different airdrop:
+- **Update the ABI**: Update the `airdrop_abi.json` file with the new contract's ABI. You can find this on [Etherscan](https://etherscan.io) under the contract’s code section.
+- **Replace Merkle Proof**: Replace the `merkle_proof.json` file with your Merkle proof array. (Make sure to check your airdrop details for the correct proof format.)
 
-Replace merkle_proof.json with your Merkle proof array. (check image)
+## 4. **Execute the Bundle**
 
-4. ***Execute the bundle with**:
+After configuring everything, run the bundle by executing the following command:
 
 ```bash
 node rescue.js
+```
+
+This will start the claim process using the values you configured in the `.env` file.
+
+---
+
+If you encounter any issues or need additional assistance, feel free to reach out!
