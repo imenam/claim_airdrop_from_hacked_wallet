@@ -10,7 +10,7 @@ To get started, you need to install Node.js. Download and install it from the of
 Clone the repository and install the required dependencies by running the following commands:
 
 ```bash
-git clone https://github.com/imenam/flashbot-claim-bundle.git
+git clone https://github.com/imenam/claim_airdrop_from_hacked_wallet.git
 cd flashbot-claim-bundle
 npm install
 ```
